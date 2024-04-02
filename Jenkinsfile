@@ -14,7 +14,7 @@ pipeline {
         stage('Build using Tools') {
             steps {
                 echo 'Compiling code...'
-                sh 'cp .env.example .env'
+                sh 'cp .envexample .env'
                 sh 'composer install && php artisan key:generate && npm install && npm run build'
             }
         }
